@@ -242,7 +242,7 @@ public class Robot extends IterativeRobot {
 			SmartDashboard.putNumber("encoderLeft", leftMotors[0].getSelectedSensorPosition(0));
 			SmartDashboard.putNumber("encoderRight", rightMotors[0].getSelectedSensorPosition(0));
 		} 
-		while (( rightMotors[0].getSelectedSensorPosition(0) < 65000) && (leftMotors[0].getSelectedSensorPosition(0) < 105668)) {
+		while ((rightMotors[0].getSelectedSensorPosition(0) < 65000) && (leftMotors[0].getSelectedSensorPosition(0) < 105668)) {
 			drive(0,-0.3);
 			arms.set(-.4);
 			SmartDashboard.putNumber("encoderLeft", leftMotors[0].getSelectedSensorPosition(0));
@@ -269,37 +269,38 @@ public class Robot extends IterativeRobot {
 		SmartDashboard.putNumber("encoderLeft", leftMotors[0].getSelectedSensorPosition(0));
 		SmartDashboard.putNumber("encoderRight", rightMotors[0].getSelectedSensorPosition(0));	
 		while ((rightMotors[0].getSelectedSensorPosition(0) < 13072) && (leftMotors[0].getSelectedSensorPosition(0) <13072)) {
-			drive(0,-.25);
+			drive(0,-.3);
 			SmartDashboard.putNumber("encoderLeft", leftMotors[0].getSelectedSensorPosition(0));
 			SmartDashboard.putNumber("encoderRight", rightMotors[0].getSelectedSensorPosition(0));
 		}
-		while ((leftMotors[0].getSelectedSensorPosition(0) > -2178) && (leftMotors[0].getSelectedSensorPosition(0) < 35254)) {
-			drive(-0.25,0);
+		while ((rightMotors[0].getSelectedSensorPosition(0) < 28322) && (leftMotors[0].getSelectedSensorPosition(0) < 35254)) {
+			drive(-0.3,0);
 			SmartDashboard.putNumber("encoderLeft", leftMotors[0].getSelectedSensorPosition(0));
 			SmartDashboard.putNumber("encoderRight", rightMotors[0].getSelectedSensorPosition(0));
-		}
-		while (( leftMotors[0].getSelectedSensorPosition(0) < 35254) && (rightMotors[0].getSelectedSensorPosition(0) < 65754)) {
-			drive(0,-0.25);
+		} 
+		while (( leftMotors[0].getSelectedSensorPosition(0) < 65000) && (rightMotors[0].getSelectedSensorPosition(0) < 105668)) {
+			drive(0,-0.3);
 			arms.set(-.4);
 			SmartDashboard.putNumber("encoderLeft", leftMotors[0].getSelectedSensorPosition(0));
 			SmartDashboard.putNumber("encoderRight", rightMotors[0].getSelectedSensorPosition(0));
 		}
-		while (65754 >= leftMotors[0].getSelectedSensorPosition(0)) {
-			drive(0.25,0);
+		while (83500 >= leftMotors[0].getSelectedSensorPosition(0)) {
+			drive(0.3,0);
 			arms.set(0);
 			SmartDashboard.putNumber("encoderLeft", leftMotors[0].getSelectedSensorPosition(0));
 			SmartDashboard.putNumber("encoderRight", rightMotors[0].getSelectedSensorPosition(0));
 		}
-		while((leftMotors[0].getSelectedSensorPosition(0) < 128150) && (rightMotors[0].getSelectedSensorPosition(0) < 82400)) {
-			drive(0,-0.25);
+		while((leftMotors[0].getSelectedSensorPosition(0) < 83600) && (rightMotors[0].getSelectedSensorPosition(0) < 83600)) {
+			drive(0,-0.3);
 			SmartDashboard.putNumber("encoderLeft", leftMotors[0].getSelectedSensorPosition(0));
 			SmartDashboard.putNumber("encoderRight", rightMotors[0].getSelectedSensorPosition(0));
 		}
+		drive (0, 0);
+		arms.set(0);
 		grabber.set(DoubleSolenoid.Value.kForward);
-			drive(0, 0);
 	}
 	
-	public void RightSideSwitch() {
+	public void LeftSideSwitch() {
 		SmartDashboard.putNumber("encoderLeft", leftMotors[0].getSelectedSensorPosition(0));
 		SmartDashboard.putNumber("encoderRight", rightMotors[0].getSelectedSensorPosition(0));
 		while ((leftMotors[0].getSelectedSensorPosition(0) < 89118) && (rightMotors[0].getSelectedSensorPosition(0) < 89118)) {
@@ -308,14 +309,9 @@ public class Robot extends IterativeRobot {
 			SmartDashboard.putNumber("encoderLeft", leftMotors[0].getSelectedSensorPosition(0));
 			SmartDashboard.putNumber("encoderRight", rightMotors[0].getSelectedSensorPosition(0));
 		}
-		while ((leftMotors[0].getSelectedSensorPosition(0) < 104368) && (rightMotors[0].getSelectedSensorPosition(0) > 73868)) {
+		while ((leftMotors[0].getSelectedSensorPosition(0) < 109368) && (rightMotors[0].getSelectedSensorPosition(0) > 68868)) {
 			drive(0.25,0);
 			arms.set(0);
-			SmartDashboard.putNumber("encoderLeft", leftMotors[0].getSelectedSensorPosition(0));
-			SmartDashboard.putNumber("encoderRight", rightMotors[0].getSelectedSensorPosition(0));
-		}
-		while ((leftMotors[0].getSelectedSensorPosition(0) < 116068) && (rightMotors[0].getSelectedSensorPosition(0) < 85568)) {
-			drive(0,-0.25);
 			SmartDashboard.putNumber("encoderLeft", leftMotors[0].getSelectedSensorPosition(0));
 			SmartDashboard.putNumber("encoderRight", rightMotors[0].getSelectedSensorPosition(0));
 		}
@@ -323,7 +319,7 @@ public class Robot extends IterativeRobot {
 			drive(0, 0);
 	}
 	
-	public void LeftSideSwitch() {
+	public void RightSideSwitch() {
 		while ((leftMotors[0].getSelectedSensorPosition(0) < 89118) && (rightMotors[0].getSelectedSensorPosition(0) < 89118)) {
 			drive(0,-0.25);
 			arms.set(-0.3);
